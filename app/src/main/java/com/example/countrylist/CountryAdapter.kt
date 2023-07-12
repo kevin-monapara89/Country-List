@@ -1,18 +1,22 @@
 package com.example.countrylist
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.bumptech.glide.Glide
 import com.example.countrylist.databinding.CountryitemBinding
+import java.io.Serializable
+
 
 class CountryAdapter : RecyclerView.Adapter<CountryAdapter.CountryHolder>() {
 
     lateinit var context: Context
-    var list = ArrayList<List<CountryModel>>()
-
+    var list = ArrayList<CountryModel>()
 
     class CountryHolder(itemView: CountryitemBinding) : ViewHolder(itemView.root) {
         var binding = itemView
@@ -30,7 +34,46 @@ class CountryAdapter : RecyclerView.Adapter<CountryAdapter.CountryHolder>() {
 
     override fun onBindViewHolder(holder: CountryHolder, position: Int) {
         holder.binding.apply {
-            list.get(position)?.
+            list.get(position)?.flags?.apply {
+                Glide.with(context).load(png).into(imgflag)
+            }
+
+            list.get(position).apply {
+                txtcountryname.text = name
+                txtcapitalname.text = capital
+            }
         }
+
+        holder.binding.country.setOnClickListener {
+            Toast.makeText(context, "${list.get(position).name}", Toast.LENGTH_SHORT).show()
+            val intent = Intent(it.context, CountryInfo::class.java)
+            intent.putExtra("png",list.get(position).flags?.png)
+            intent.putExtra("name",list.get(position).name)
+            intent.putExtra("capital",list.get(position).capital)
+            intent.putExtra("region",list.get(position).region)
+            intent.putExtra("subregion",list.get(position).subregion)
+            intent.putExtra("nativeName",list.get(position).nativeName)
+            intent.putExtra("population",list.get(position).population)
+            intent.putExtra("demonym",list.get(position).demonym)
+//            intent.putExtra("symbol",list.get(position).currencies)
+//            intent.putExtra("symbol",list.get(position)?.currencies)
+//            intent.putExtra("borders", list.get(position).borders)
+//            intent.putParcelableArrayListExtra("borders",list.get(position).borders)
+            intent.putExtra("independent",list.get(position).independent)
+//            intent.putExtra("timezones",list.get(position).timezones)
+//            intent.putExtra("languages",list.get(position).languages)
+//            intent.putExtra("topLevelDomain",list.get(position).topLevelDomain)
+//            intent.putExtra("callingCodes",list.get(position).callingCodes)
+
+            it.context.startActivity(intent)
+        }
+    }
+
+    fun setFlag(flags: List<CountryModel>?) {
+        this.list = (flags as ArrayList<CountryModel>?)!!
+    }
+
+    fun search(name: List<CountryModel>?) {
+        this.list = (name as ArrayList<CountryModel>?)!!
     }
 }
