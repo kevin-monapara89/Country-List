@@ -46,6 +46,7 @@ class CountryAdapter : RecyclerView.Adapter<CountryAdapter.CountryHolder>() {
 
         holder.binding.country.setOnClickListener {
             Toast.makeText(context, "${list.get(position).name}", Toast.LENGTH_SHORT).show()
+
             val intent = Intent(it.context, CountryInfo::class.java)
             intent.putExtra("png",list.get(position).flags?.png)
             intent.putExtra("name",list.get(position).name)
@@ -54,16 +55,13 @@ class CountryAdapter : RecyclerView.Adapter<CountryAdapter.CountryHolder>() {
             intent.putExtra("subregion",list.get(position).subregion)
             intent.putExtra("nativeName",list.get(position).nativeName)
             intent.putExtra("population",list.get(position).population)
+            intent.putExtra("area",list.get(position).area.toString())
             intent.putExtra("demonym",list.get(position).demonym)
-//            intent.putExtra("symbol",list.get(position).currencies)
-//            intent.putExtra("symbol",list.get(position)?.currencies)
-//            intent.putExtra("borders", list.get(position).borders)
-//            intent.putParcelableArrayListExtra("borders",list.get(position).borders)
+            intent.putExtra("borders", list.get(position).borders.toString())
             intent.putExtra("independent",list.get(position).independent)
-//            intent.putExtra("timezones",list.get(position).timezones)
-//            intent.putExtra("languages",list.get(position).languages)
-//            intent.putExtra("topLevelDomain",list.get(position).topLevelDomain)
-//            intent.putExtra("callingCodes",list.get(position).callingCodes)
+            intent.putExtra("timezones",list.get(position).timezones.toString())
+            intent.putExtra("topLevelDomain",list.get(position).topLevelDomain.toString())
+            intent.putExtra("callingCodes",list.get(position).callingCodes.toString())
 
             it.context.startActivity(intent)
         }
