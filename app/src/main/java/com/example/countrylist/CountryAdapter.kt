@@ -24,7 +24,7 @@ class CountryAdapter : RecyclerView.Adapter<CountryAdapter.CountryHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryHolder {
         context = parent.context
-        var binding = CountryitemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        var binding = CountryitemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CountryHolder(binding)
     }
 
@@ -45,9 +45,11 @@ class CountryAdapter : RecyclerView.Adapter<CountryAdapter.CountryHolder>() {
         }
 
         holder.binding.country.setOnClickListener {
+
             Toast.makeText(context, "${list.get(position).name}", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(it.context, CountryInfo::class.java)
+
             intent.putExtra("png",list.get(position).flags?.png)
             intent.putExtra("name",list.get(position).name)
             intent.putExtra("capital",list.get(position).capital)

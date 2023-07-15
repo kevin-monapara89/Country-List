@@ -1,5 +1,6 @@
 package com.example.countrylist
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -12,6 +13,11 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     lateinit var adapter: CountryAdapter
+    companion object {
+        var countryList = ArrayList<CountryModel>()
+    }
+
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -20,10 +26,10 @@ class MainActivity : AppCompatActivity() {
         adapter = CountryAdapter()
 
         ApiCall()
-        binding.imgsearch.setOnClickListener {
-            var name = binding.search.text.toString()
-                searchApi(name)
-        }
+//        binding.imgsearch.setOnClickListener {
+//            var name = binding.search.text.toString()
+//                searchApi(name)
+//        }
     }
 
     private fun ApiCall() {
