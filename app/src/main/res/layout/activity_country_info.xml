@@ -21,6 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <TextView
@@ -78,7 +79,7 @@
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Capital "
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -89,6 +90,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="#343D44"
                         android:text="Capital"
                         android:textSize="@dimen/_15sdp" />
 
@@ -110,7 +112,7 @@
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Region"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -121,6 +123,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="#343D44"
                         android:text="Asia"
                         android:textSize="@dimen/_15sdp" />
 
@@ -142,7 +145,7 @@
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Subregion"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -153,6 +156,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="#343D44"
                         android:text="Southern Asia"
                         android:textSize="@dimen/_15sdp" />
 
@@ -168,13 +172,13 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="2"
                         android:background="#c9d6df"
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Native Name"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -184,8 +188,10 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
+                        android:textColor="#343D44"
                         android:paddingLeft="@dimen/_10sdp"
-                        android:text="भारत"
+                        android:lines="2"
+                        android:text="भारत "
                         android:textSize="@dimen/_15sdp" />
 
                 </LinearLayout>
@@ -206,7 +212,7 @@
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Population"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -217,6 +223,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="#343D44"
                         android:text="123456789"
                         android:textSize="@dimen/_15sdp" />
 
@@ -238,7 +245,7 @@
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Area"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -248,6 +255,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
+                        android:textColor="#343D44"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="3287590.0"
                         android:textSize="@dimen/_15sdp" />
@@ -270,7 +278,7 @@
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Nationality"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -281,6 +289,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="#343D44"
                         android:text="Indian"
                         android:textSize="@dimen/_15sdp" />
 
@@ -302,7 +311,7 @@
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Borders"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -313,6 +322,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="#343D44"
                         android:text="pak\n shree lanka\n bhutan\n afg\n nepal "
                         android:textSize="@dimen/_15sdp" />
 
@@ -328,14 +338,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="2"
                         android:background="#c9d6df"
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_7sdp"
                         android:text="Independent"
-                        android:textColor="#343D44"
-                        android:textSize="@dimen/_15sdp"
+                        android:textColor="#22282C"
+                        android:textSize="@dimen/_14sdp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -345,6 +355,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="#343D44"
                         android:text="true"
                         android:textSize="@dimen/_15sdp" />
 
@@ -366,7 +377,7 @@
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Time Zone"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -377,6 +388,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="#343D44"
                         android:text="UTC+05:30"
                         android:textSize="@dimen/_15sdp" />
 
@@ -398,7 +410,7 @@
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Domain"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -409,6 +421,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="#343D44"
                         android:text=".in"
                         android:textSize="@dimen/_15sdp" />
 
@@ -427,13 +440,13 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="2"
                         android:background="#c9d6df"
                         android:gravity="left|center"
                         android:paddingLeft="@dimen/_10sdp"
                         android:text="Calling code"
-                        android:textColor="#343D44"
+                        android:textColor="#22282C"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -444,6 +457,8 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:lines="2"
+                        android:textColor="#343D44"
                         android:text="91"
                         android:textSize="@dimen/_15sdp" />
 

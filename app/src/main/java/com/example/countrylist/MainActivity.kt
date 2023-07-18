@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.countrylist.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     var flags = response.body()
                     adapter.setFlag(flags as List<CountryModel>)
-                    binding.rcvcountryflag.layoutManager = GridLayoutManager(this@MainActivity,1)
+                    binding.rcvcountryflag.layoutManager = LinearLayoutManager(this@MainActivity)
                     binding.rcvcountryflag.adapter = adapter
                 }
             }
