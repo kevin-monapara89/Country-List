@@ -14,9 +14,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     lateinit var adapter: CountryAdapter
-    companion object {
-        var countryList = ArrayList<CountryModel>()
-    }
 
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
